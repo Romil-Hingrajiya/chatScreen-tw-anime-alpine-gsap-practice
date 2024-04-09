@@ -1,0 +1,254 @@
+<!-- boilerplate or starter (html,head,title,meta,css) -->
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" dir="ltr">
+
+<head>
+    
+    <meta charset="UTF-8" />
+    <title>RoMiL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="version" content="1.5.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Main Css -->
+    <link rel="stylesheet" href="assets/css/tailwind.css" />
+    <!-- alpine js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- anime js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.js" integrity="sha512-E378bwaeZf1nwXeJGIwTB58A5gPt5jFU3u6aTGja4ZdRFJeo/N/REKnBgNZOZlH6JdnOPO98vg2AnSGaNfCMFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- GreenSock App version for scrolling effect -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+</head>
+
+<body class="dark:bg-slate-400 bg-slate-300 overflow-x-hidden">
+
+
+<section class="bg-slate-300 h-screen w-full"></section>
+<section class="bg-blue-400 h-screen w-full"></section>
+
+<section class="w-full pb-8 top-0" id="chat_display">
+    <div class="w-full py-16">
+
+
+        <div class="w-[25vw] h-[80vh] relative z-0 bg-[#f2eee5] rounded-2xl mx-auto">
+
+            <div class="font-sans rounded-t-2xl relative top-0 z-10 bg-white flex items-center p-2.5 border-b border-b-[#e5e5e5]">
+                <div class="mx-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                    </svg>
+                </div>
+                <div class="flex flex-col">
+                    <h2 class="font-bold text-lg">CR Jewellers Pvt. Ltd</h2>
+                    <h6>assigned to Anupam</h6>
+                </div>
+            </div>
+            <!-- profile or navbar end -->
+
+            <div class="overflow-y-hidden absolute top-0 left-[50%] w-[100vw] h-[78vh] translate-x">
+                <div class="absolute w-[25vw] top-0 left-[50%] right-0 bottom-0 rounded-3xl translate-x">
+                    <div class="img-holder-section">
+
+                        <div class="img-holder-odd w-full" style="z-index: 1;" id="image_1">
+                            <img src="./assets/images/1st-img.webp" class="h-[220px] w-auto ml-auto" alt="products">
+                            <div class="description-container-odd" style="display: none;" id="description-container-1">
+                                <svg width="135" height="135" viewBox="0 0 135 131" fill="none" xmlns="http://www.w3.org/2000/svg" class=""><path d="M117.231 66.5283C110.898 78.9387 108.661 94.7071 113.229 108.738" stroke="#000" stroke-width="4" stroke-linecap="round"></path><path d="M84.2128 77.8647C96.8366 83.7405 108.299 94.7865 113.331 108.657" stroke="#000" stroke-width="4" stroke-linecap="round"></path><path d="M110.814 101.856C99.5607 55.9535 59.5692 19.4878 2.99811 27.9571" stroke="#000" stroke-width="4" stroke-linecap="round"></path></svg>
+                                <p class="description-text">Send product photos with title, price and other info on customer WhatsApp</p>
+                            </div>
+                        </div>
+
+                        <div class="img-holder-even w-full" style="z-index: 1;" id="image_2">
+                            <img src="./assets/images/2nd-img.webp" class="h-[220px] w-auto mr-auto" alt="products">
+                            <div class="description-container-even" style="display: none;" id="description-container-2">
+                                <svg width="135" height="135" viewBox="0 0 135 131" fill="none" xmlns="http://www.w3.org/2000/svg" class="left-description-arrow"><path d="M117.231 66.5283C110.898 78.9387 108.661 94.7071 113.229 108.738" stroke="#000" stroke-width="4" stroke-linecap="round"></path><path d="M84.2128 77.8647C96.8366 83.7405 108.299 94.7865 113.331 108.657" stroke="#000" stroke-width="4" stroke-linecap="round"></path><path d="M110.814 101.856C99.5607 55.9535 59.5692 19.4878 2.99811 27.9571" stroke="#000" stroke-width="4" stroke-linecap="round"></path></svg>
+                                <p class="description-text">Automatic detection of product images sent by customer</p>
+                            </div>
+                        </div>
+
+                        <div class="img-holder-odd w-full" style="z-index: 1;" id="image_3">
+                            <img src="./assets/images/3rd-img.webp" class="h-[220px] w-auto ml-auto" alt="products">
+                            <div class="description-container-odd" style="display: none;" id="description-container-3">
+                                <svg width="135" height="135" viewBox="0 0 135 131" fill="none" xmlns="http://www.w3.org/2000/svg" class=""><path d="M117.231 66.5283C110.898 78.9387 108.661 94.7071 113.229 108.738" stroke="#000" stroke-width="4" stroke-linecap="round"></path><path d="M84.2128 77.8647C96.8366 83.7405 108.299 94.7865 113.331 108.657" stroke="#000" stroke-width="4" stroke-linecap="round"></path><path d="M110.814 101.856C99.5607 55.9535 59.5692 19.4878 2.99811 27.9571" stroke="#000" stroke-width="4" stroke-linecap="round"></path></svg>
+                                <p class="description-text">Automatically send cart</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- image holder section end -->
+
+            <div class="absolute bottom-0 left-[50%] z-20 mt-auto p-2.5 px-4 rounded-b-2xl flex justify-between items-center bg-[#f2eee5] w-full translate-x">
+
+                <div class="flex items-center bg-white grow p-2.5 rounded-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-emoji-smile-fill h-6 w-6 fill-gray-500" viewBox="0 0 16 16">
+                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zM4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM10 8c-.552 0-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5S10.552 8 10 8z"/>
+                    </svg>
+                    <p class="text-gray-500 font-semibold ml-4">Message</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-paperclip h-6 w-6 fill-gray-500 ml-auto mr-2" viewBox="0 0 16 16">
+                        <path d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0V3z"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-camera-fill h-6 w-6 fill-gray-500 mr-3" viewBox="0 0 16 16">
+                        <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                        <path d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z"/>
+                    </svg>
+                </div>
+
+                <div class="flex items-center justify-center shrink rounded-full bg-white mx-2 h-11 w-11">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-telegram fill-gray-500 h-6 w-6" viewBox="0 0 16 16">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
+                    </svg>
+                </div>
+                
+            </div>
+            <!-- chat section or footer end -->
+            
+
+        </div>
+
+    </div>
+</section>
+
+
+<div class="">
+    <section class="bg-slate-300 h-screen w-full"></section>
+    <section class="bg-slate-300 h-96 w-full"></section>
+    <section class="bg-slate-300 h-96 w-full"></section>
+    <section class="bg-slate-300 h-96 w-full"></section>
+    <section class="bg-slate-300 h-96 w-full"></section>
+</div>
+<div class="sticky top-0">
+    <section class="bg-blue-400 h-96 w-full"></section>
+    <section class="bg-black h-screen w-full"></section>
+</div>
+<!-- footer,switcher,back-to-top & script-files -->
+<!-- Switcher -->
+<div class="fixed top-1/3 -left-2 z-3">
+    <span class="relative inline-block rotate-90">
+        <input type="checkbox" class="checkbox opacity-0 absolute" id="chk" />
+        <label class="label bg-slate-900 dark:bg-white shadow dark:shadow-gray-700 cursor-pointer rounded-full flex justify-between items-center p-1 h-6 w-12 md:w-16 md:h-8" for="chk">
+            <i class="fa-solid fa-moon text-[20px] md:text-[30px] text-yellow-500 -mt-0"></i>
+            <i class="fa-solid fa-sun text-[15px] md:text-[22px] text-yellow-500 -mt-0"></i>
+            <span class="ball h-5 w-5 md:w-7 md:h-7 bg-white dark:bg-slate-900 rounded-full absolute top-[0.125rem] md:dark:left-[2.1rem] dark:left-[1.6rem]"></span>
+        </label>
+    </span>
+</div>
+<!-- Switcher -->
+
+
+<!-- Back to top -->
+<a href="#" onclick="topFunction()" id="back-to-top" class="back-to-top fixed hidden text-lg rounded-full z-10 bottom-5 end-5 h-9 w-9 text-center bg-green-600 text-white justify-center items-center"><i class="fa-solid fa-arrow-up"></i></a>
+<!-- Back to top -->
+
+<!-- JAVASCRIPTS -->
+
+<script src="assets/libs/tiny-slider/min/tiny-slider.js"></script>
+<!-- <script src="assets/libs/tobii/js/tobii.min.js"></script> -->
+<script src="assets/libs/@fortawesome/fontawesome-free/js/all.min.js"></script>
+<script src="assets/js/plugins.init.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/easy_background.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<script>
+  // AOS init
+  AOS.init();
+
+  // ========================= //
+  // scrolling effect function //
+  // ========================= //
+
+  function scrollHandler(id, scrollStart, direction) {
+    var scrollCenter = scrollStart + 300;
+    var scrollEnd = scrollCenter + 300;
+
+    var mainImg = document.getElementById("image_" + id);
+    var imgDescription = document.getElementById("description-container-" + id);
+
+    // <!-- scrolling condition start -->
+
+    if (
+      document.documentElement.scrollTop > scrollStart &&
+      document.documentElement.scrollTop < scrollEnd
+    ) {
+      let increaseScrollAmount = 0;
+
+      if (document.documentElement.scrollTop < scrollCenter) {
+        let imgScrollAmount = document.documentElement.scrollTop - scrollStart;
+        let imgInnerScroll = imgScrollAmount / 3;
+        increaseScrollAmount = Math.round(direction * (0 + imgInnerScroll));
+
+        imgDescription.classList.remove("block");
+      } else {
+        let imgScrollAmount = document.documentElement.scrollTop - scrollCenter;
+        let imgInnerScroll = imgScrollAmount / 3;
+        increaseScrollAmount = Math.round(direction * (100 - imgInnerScroll));
+
+        imgDescription.classList.add("block");
+      }
+
+      mainImg.style.transform = `translateX( ${increaseScrollAmount}px )`;
+    } else {
+      mainImg.style.transform = `translateX(0px)`;
+      imgDescription.classList.remove("block");
+    }
+  }
+
+  //  =================================================================================================================================================================================================== //
+  //  matchup body scroll and then compare for further manipulation
+  //  =================================================================================================================================================================================================== //
+
+  window.addEventListener("scroll", () => {
+    // main container stick to top
+    const mainBox = document.querySelector("#chat_display");
+
+    const scrollY = window.scrollY;
+    console.log(scrollY);
+
+    if (
+      document.documentElement.scrollTop > 1135 &&
+      document.documentElement.scrollTop < 4535
+    ) {
+      mainBox.classList.add("sticky");
+    } else {
+      mainBox.classList.remove("sticky");
+    }
+
+    // image holder section (top position decrease(-) for scroll)
+    const imgBox = document.querySelector(".img-holder-section");
+
+    if (
+      document.documentElement.scrollTop > 1135 &&
+      document.documentElement.scrollTop < 4535
+    ) {
+      let scrollAmount = document.documentElement.scrollTop - 1200;
+      let innerScroll = scrollAmount / 3.4;
+      let targetScrollAmount = Math.round(350 - innerScroll);
+      imgBox.style.top = `${targetScrollAmount}px`;
+    } else {
+      imgBox.style.top = "200px";
+    }
+
+    //   =================================================================================================================================================================================================== //
+    scrollHandler("1", 1500, 1);
+
+    // (image_2, description_text_2), (starting point for scroll 2300), (translateX value)
+    //   =================================================================================================================================================================================================== //
+    scrollHandler("2", 2300, -1);
+
+    //   =================================================================================================================================================================================================== //
+    scrollHandler("3", 3200, 1);
+  });
+</script>
+
+<!-- JAVASCRIPTS -->
+
+
+
+
+</body>
+
+</html>
+
